@@ -69,3 +69,23 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+/* My Styles */
+
+.time {
+  border-top: 3px solid black;
+}
+
+.task-height {
+  height: 100%;
+}
+.task-box {
+  border: 2px solid rgb(0, 0, 0); 
+  background-color: gray; 
+  border-bottom-left-radius: 30px;
+}
+
+.save-button {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}

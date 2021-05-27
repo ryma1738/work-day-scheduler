@@ -18,7 +18,12 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" 
+    integrity="sha512-UyNhw5RNpQaCai2EdC+Js0QL4RlVmiq41DkmCJsRV3ZxipG2L0HhTqIf/H9Hp8ez2EnFlkBnjRGJU2stW3Lj+w==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assests/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,8 +33,192 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
     <div class="container">
-      <!-- Timeblocks go here -->
+      <ul class="list-group">
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="7-am">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">7AM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="7am-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="8-am">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">8AM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="8am-task">
+                <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="9-am">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">9AM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="9am-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="10-am">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">10AM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="10am-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="11-am">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">11AM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="11am-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="12-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">12PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="12pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="1-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">1PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="1pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="2-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">2PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="2pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="3-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">3PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="3pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div> 
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item pt-1 pb-0 border-0" id="4-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">4PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="4pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div>
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+        
+        <li class="list-group-item pt-1 pb-0 border-0" id="5-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">5PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="5pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div>
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+        
+        <li class="list-group-item pt-1 pb-0 border-0" id="6-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">6PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="6pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div>
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+         
+        <li class="list-group-item pt-1 pb-0 border-0" id="7-pm">
+          <div class="row">
+            <div class="col-sm-2 col-md-1 time p-0 task-height text-right">
+              <span class="pr-3 task-height">7PM</span>
+            </div>
+            <div class="col-8 col-sm-8 col-md-10 task-box task-height text-left" id="7pm-task">
+              <span class="pt-2" id="task-entry">Lorem ipsum dolor, sit amet consectetur </span>
+            </div>
+            <div class="col-sm-2 col-md-1 task-height bg-info save-button">
+              <span class="oi oi-task pl-2 pl-sm-2 pl-md-2 pl-lg-3"></span>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
