@@ -2,24 +2,14 @@ var currentDate = moment().format("ddd, MMM/DD/YYYY");
 var interval = null;
 var tasks = null;
 
-function saveButtonClicked(event) {
-    //add logic for finding out what save button was clicked.
-    targetEl = $(this).attr("value");
-    var text = $("#" + targetEl + "-task").val();
-    console.log(text)
-}
-
-function saveTask() {
-    //checks to see if the input element has text, if so save the task to localStorage
-}
-
 function currentTime() {
-    //Checks for the current time every 15mins then every minute when the time till next hour is < 15mins away
+    //Checks for the current time every 15mins then every 2 minutes when it is 15mins to the next hour, 
+    //and it updates the backgrounds on the task boxes
     var timeNow = moment().format("H:m");
     timeNow = timeNow.split(":");
     hourNow = parseInt(timeNow[0]);;
     minuteNow = parseInt(timeNow[1]);
-    console.log(hourNow, minuteNow)
+
     if (hourNow < 7) {
         $(".task-box").each(function() {
             $(this).removeClass("task-box-past bg-danger bg-success").addClass("bg-success");
@@ -42,9 +32,6 @@ function currentTime() {
             else if (hourNow === i) {
                 $(this).removeClass("task-box-past bg-danger bg-success").addClass("bg-danger");
             }
-            else {
-                console.log("ERROR")
-            }
             i++;
         });
     }
@@ -59,8 +46,60 @@ function currentTime() {
     $("#currentDay").text("Todays date is: " + currentDate);
 }
 
+function saveButtonClicked(event) {
+    //add logic for finding out what save button was clicked then adding the inputs to LocalStorage
+    var time = $(this).attr("value");
+    var text = $("#" + time + "-task").val();
+    if (tasks) {
+        var alreadyThere = false;
+        for (var i = 0; i < tasks.length; i++) {
+            if (tasks[i].time === time) {
+                alreadyThere = true;
+                tasks[i].text = text;
+            }
+        }
+        if (!alreadyThere) {
+            var task = {text: text, time: time};
+                tasks.push(task);
+                console.log(tasks)
+        }
+        saveTask();
+    }
+    else {
+        tasks = [
+            {
+                text: text,
+                time: time
+            }
+        ];
+        console.log(tasks)
+        saveTask();
+    }
+    alert("Task Saved!");
+}
+
+function saveTask() {
+    //Saves tasks to localStorage
+    localStorage.setItem("dailyTasks", JSON.stringify(tasks));
+}
+
 function loadTasks() {
     //Loads the tasks on startup
+    tasks = localStorage.getItem("dailyTasks");
+    if (tasks) { 
+        tasks = JSON.parse(tasks);
+        for (var i =0; i < tasks.length; i++) {
+            var time = tasks[i].time;
+            var task  = tasks[i].text;
+            console.log("#" + time + "-task")
+            console.log(task)
+            $("#" + time + "-task").val(task);
+        }
+    }
+    else {
+        tasks = null;
+    }
+    console.log(tasks)
 }
 
 
