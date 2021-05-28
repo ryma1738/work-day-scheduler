@@ -80,12 +80,44 @@ textarea{
   height: 100%;
 }
 .task-box {
-  border: 2px solid rgb(0, 0, 0); 
-  background-color: gray; 
+  border: 3px solid rgb(0, 0, 0); 
   border-bottom-left-radius: 30px;
+  font-weight: bold;
+}
+
+.task-box:focus {
+  border: 4px solid black;
+  outline: none;
+  font-weight: normal;
+}
+
+.task-box-past {
+  background-color: rgb(172, 172, 172); 
 }
 
 .save-button {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+  border: 2px solid black;
+  border-left: none;
+  background-color: rgb(2, 152, 172);
+}
+
+.save-button:hover {
+  border-width: 3px;
+  box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.save-button:focus {
+  outline: none;
+}
+
+.save-button:active {
+  box-shadow: none;
+  border-width: 2px;
+}
+
+.save-button span {
+  transform: scale(1.6);
+  padding-bottom: 15px;
 }
